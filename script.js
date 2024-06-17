@@ -36,4 +36,49 @@ document.addEventListener("DOMContentLoaded", function(){
         option.classList.add("active")
         })
     })
+
+    const sections = document.querySelectorAll(".info-about");
+    const prevButtons = document.querySelectorAll(".controls svg:first-child");
+    const nextButtons = document.querySelectorAll(".controls svg:last-child");
+
+    let currentIndex = 0;
+
+    function showSection(index) {
+        sections.forEach((section, i) => {
+            if (i === index) {
+                section.classList.add("active");
+            } else {
+                section.classList.remove("active");
+            }
+        });
+    }
+
+    function prevSection() {
+        currentIndex = (currentIndex === 0) ? sections.length - 1 : currentIndex - 1;
+        showSection(currentIndex);
+    }
+
+    function nextSection() {
+        currentIndex = (currentIndex === sections.length - 1) ? 0 : currentIndex + 1;
+        showSection(currentIndex);
+    }
+
+    prevButtons.forEach(button => button.addEventListener("click", prevSection));
+    nextButtons.forEach(button => button.addEventListener("click", nextSection));
+
+    showSection(currentIndex);
+
+    const elementsToAnimate = document.querySelectorAll(".animate-on-observe")
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active")
+                } else {
+                    entry.target.classList.remove("active")
+                }
+            })
+        })
+    
+        elementsToAnimate.forEach((element) => observer.observe(element))
 })
