@@ -262,40 +262,41 @@
     <section class="form">
         <div class="dropdown">
             <div class="select">
-                <span class="selected">Youtube</span>
+                <span class="selected">Where To Buy</span>
                 <div class="caret"></div>
             </div>
             <ul class="menu">
-                <li>Where To Buy</li>
                 <li>Product Concern</li>
                 <li>Promotion</li>
                 <li>Nutrition</li>
                 <li class="active">Others</li>
             </ul>
         </div>
-
+    
         <div class="input-section">
-
             <div class="left group">
-                <p>FirstName</p>
-                <input type="text">
-                <p>FirstName</p>
-                <input type="text">
+                <p>First Name</p>
+                <input type="text" id="firstName">
+                <small class="error" id="firstNameError"></small>
+                <p>Last Name</p>
+                <input type="text" id="lastName">
+                <small class="error" id="lastNameError"></small>
             </div>
-
             <div class="right group">
                 <p>Email</p>
-                <input type="text">
+                <input type="text" id="email">
+                <small class="error" id="emailError"></small>
                 <p>Phone Number</p>
-                <input type="text">
+                <input type="text" id="phoneNumber">
+                <small class="error" id="phoneNumberError"></small>
             </div>
-
         </div>
-
-        <textarea placeholder="type your message here" class="text-area" name="" id=""></textarea>
     
-        <button>SEND</button>
+        <textarea placeholder="type your message here" class="text-area" id="message"></textarea>
+        <small class="error" id="messageError"></small>
+        <button id="submitBtn">SEND</button>
     </section>
+    
 
     <footer>
         <div class="info-group">
@@ -334,7 +335,7 @@
             </div>
         </div>
 
-        <p id="copyright">&copy; 2024 Nature'Eve. All Rights Reserved.</p>
+        <p id="copyright">&copy; 2024 VKellogg’s. All Rights Reserved.</p>
     
         <div class="find-us">
             <p>Find Us On</p>
