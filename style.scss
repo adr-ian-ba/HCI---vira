@@ -654,6 +654,13 @@ nav{
         border-radius: 10px;
         font-weight: bold;
         color: var(--purple-500);
+        border: none;
+        transition: all .1s linear;
+
+        &:hover{
+            background-color: var(--purple-100);
+            color: var(--beige-100);
+        }
 
     }
 

@@ -592,6 +592,12 @@ nav .mobile .inner ul a li:hover {
   border-radius: 10px;
   font-weight: bold;
   color: var(--purple-500);
+  border: none;
+  transition: all 0.1s linear;
+}
+.form button:hover {
+  background-color: var(--purple-100);
+  color: var(--beige-100);
 }
 .form .error {
   color: red;
